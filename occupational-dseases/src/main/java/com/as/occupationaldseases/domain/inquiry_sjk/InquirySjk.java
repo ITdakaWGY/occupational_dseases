@@ -16,6 +16,8 @@ public class InquirySjk {
     private Integer id;
     @ApiModelProperty("用户id")
     private String personalid;
+    @ApiModelProperty("条码号")
+    private String tmh;
     @ApiModelProperty("肌萎缩")
     private String jws;
     @ApiModelProperty("肌萎缩描述")

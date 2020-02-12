@@ -16,6 +16,8 @@ public class InquiryWk {
     private Integer id;
     @ApiModelProperty("用户id")
     private String personalid;
+    @ApiModelProperty("条码号")
+    private String tmh;
     @ApiModelProperty("甲状腺")
     private String jzx;
     @ApiModelProperty("甲状腺描述")

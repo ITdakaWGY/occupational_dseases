@@ -18,6 +18,8 @@ public class InquiryNk {
     @ApiModelProperty("用户id")
     @TableField("personalid")
     private String personalid;
+    @ApiModelProperty("条码号")
+    private String tmh;
     @ApiModelProperty("胸廓")
     private String xk;
     @ApiModelProperty("胸廓其他")

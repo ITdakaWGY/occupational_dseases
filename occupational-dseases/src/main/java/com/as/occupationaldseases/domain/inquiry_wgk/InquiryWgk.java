@@ -16,6 +16,8 @@ public class InquiryWgk {
     private Integer id;
     @ApiModelProperty("用户id")
     private String personalid;
+    @ApiModelProperty("条码号")
+    private String tmh;
     @ApiModelProperty("左眼视力")
     private String zysl;
     @ApiModelProperty("有眼视力")
