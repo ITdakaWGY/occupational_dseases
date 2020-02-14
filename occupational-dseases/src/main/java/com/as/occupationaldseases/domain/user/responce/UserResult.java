@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserResult extends ResponseResult {
     User user;
+
     public UserResult(ResultCode resultCode, User user) {
         super(resultCode);
         this.user = user;

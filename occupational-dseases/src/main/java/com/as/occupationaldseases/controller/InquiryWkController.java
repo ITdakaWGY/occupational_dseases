@@ -23,8 +23,8 @@ public class InquiryWkController implements InquiryWkApi {
 
     @Override
     @PutMapping("/edit/{id}")//这里使用put方法，http 方法中put表示更新
-    public WkResult edit(@PathVariable("id")Integer id, @RequestBody InquiryWk inquiryWk) {
-        return inquiryWkService.update(id,inquiryWk);
+    public WkResult edit(@PathVariable("id") Integer id, @RequestBody InquiryWk inquiryWk) {
+        return inquiryWkService.update(id, inquiryWk);
     }
 
     @Override
@@ -36,6 +36,6 @@ public class InquiryWkController implements InquiryWkApi {
     @Override
     @GetMapping("/list/{page}/{size}")
     public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, InquiryWk inquiryWk) {
-        return inquiryWkService.findList(page,size,inquiryWk);
+        return inquiryWkService.findList(page, size, inquiryWk);
     }
 }

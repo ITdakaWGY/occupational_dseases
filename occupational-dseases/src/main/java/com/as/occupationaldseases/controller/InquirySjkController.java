@@ -23,8 +23,8 @@ public class InquirySjkController implements InquirySjkApi {
 
     @Override
     @PutMapping("/edit/{id}")//这里使用put方法，http 方法中put表示更新
-    public SjkResult edit(@PathVariable("id")Integer id, @RequestBody InquirySjk inquirySjk) {
-        return inquirySjkService.update(id,inquirySjk);
+    public SjkResult edit(@PathVariable("id") Integer id, @RequestBody InquirySjk inquirySjk) {
+        return inquirySjkService.update(id, inquirySjk);
     }
 
     @Override
@@ -36,6 +36,6 @@ public class InquirySjkController implements InquirySjkApi {
     @Override
     @GetMapping("/list/{page}/{size}")
     public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, InquirySjk inquirySjk) {
-        return inquirySjkService.findList(page,size,inquirySjk);
+        return inquirySjkService.findList(page, size, inquirySjk);
     }
 }

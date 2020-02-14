@@ -24,14 +24,14 @@ public class InquiryWkService {
 
     //新增
     public WkResult add(InquiryWk inquiryWk) {
-        if(inquiryWk == null){
+        if (inquiryWk == null) {
             //抛出异常，非法参数异常..指定异常信息的内容
-            return new WkResult(CommonCode.INVALID_PARAM,null);
+            return new WkResult(CommonCode.INVALID_PARAM, null);
         }
         //校验Id的唯一性
         //根据Id集合，如果查到说明已经存在，如果查询不到再继续添加
         InquiryWk inquiryWk1 = inquiryWkMapper.selectById(inquiryWk.getId());
-        if(inquiryWk1!=null){
+        if (inquiryWk1 != null) {
             //已经存在
             //抛出异常，异常内容就是已经存在
             ExceptionCast.cast(WkCode.Wk_ADD_EXISTSNAME);
@@ -40,53 +40,54 @@ public class InquiryWkService {
         //调用dao新增
         inquiryWk.setId(null);//id自增
         inquiryWkMapper.insert(inquiryWk);
-        return new WkResult(CommonCode.SUCCESS,inquiryWk);
+        return new WkResult(CommonCode.SUCCESS, inquiryWk);
 
     }
 
     //修改
-    public WkResult update(Integer id,InquiryWk inquiryWk){
+    public WkResult update(Integer id, InquiryWk inquiryWk) {
         //根据id从数据库查询页面信息
         InquiryWk one = inquiryWkMapper.selectById(id);
-        if(one!=null){
+        if (one != null) {
             //提交修改
             inquiryWkMapper.updateById(inquiryWk);
-            return new WkResult(CommonCode.SUCCESS,inquiryWk);
+            return new WkResult(CommonCode.SUCCESS, inquiryWk);
         }
         //修改失败
-        return new WkResult(WkCode.Wk_NOTEXISTS,null);
+        return new WkResult(WkCode.Wk_NOTEXISTS, null);
 
     }
 
     //根据id删除
-    public WkResult delete(Integer id){
+    public WkResult delete(Integer id) {
         //先查询一下
         InquiryWk inquiryWk = inquiryWkMapper.selectById(id);
-        if (inquiryWk!=null){
+        if (inquiryWk != null) {
             inquiryWkMapper.deleteById(id);
-            return new WkResult(CommonCode.SUCCESS,inquiryWk);
+            return new WkResult(CommonCode.SUCCESS, inquiryWk);
         }
-        return new WkResult(WkCode.Wk_NOTEXISTS,null);
+        return new WkResult(WkCode.Wk_NOTEXISTS, null);
     }
 
     /**
      * 查询方法
-     * @param current 页码，从1开始记数
-     * @param size 每页记录数
+     *
+     * @param current   页码，从1开始记数
+     * @param size      每页记录数
      * @param inquiryWk 查询条件
      * @return
      */
-    public QueryResponseResult findList(int current, int size, InquiryWk inquiryWk){
-        if(inquiryWk == null){
+    public QueryResponseResult findList(int current, int size, InquiryWk inquiryWk) {
+        if (inquiryWk == null) {
             inquiryWk = new InquiryWk();
         }
 
         //分页参数
-        if(current <=0){
+        if (current <= 0) {
             current = 1;
         }
-        current = current -1;
-        if(size<=0){
+        current = current - 1;
+        if (size <= 0) {
             size = 10;
         }
 
@@ -100,12 +101,9 @@ public class InquiryWkService {
 
         queryResult.setList(inquiryWkIPage.getRecords());//数据列表
         queryResult.setTotal(inquiryWkIPage.getTotal());//数据总记录数
-        QueryResponseResult queryResponseResult = new QueryResponseResult(CommonCode.SUCCESS,queryResult);
+        QueryResponseResult queryResponseResult = new QueryResponseResult(CommonCode.SUCCESS, queryResult);
         return queryResponseResult;
     }
-
-
-
 
 
 }

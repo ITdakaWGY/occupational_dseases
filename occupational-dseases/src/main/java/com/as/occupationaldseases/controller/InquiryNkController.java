@@ -24,8 +24,8 @@ public class InquiryNkController implements InquiryNkApi {
 
     @Override
     @PutMapping("/edit/{id}")//这里使用put方法，http 方法中put表示更新
-    public NkResult edit(@PathVariable("id")Integer id, @RequestBody InquiryNk inquiryNk) {
-        return inquiryNkService.update(id,inquiryNk);
+    public NkResult edit(@PathVariable("id") Integer id, @RequestBody InquiryNk inquiryNk) {
+        return inquiryNkService.update(id, inquiryNk);
     }
 
     @Override
@@ -37,6 +37,6 @@ public class InquiryNkController implements InquiryNkApi {
     @Override
     @GetMapping("/list/{page}/{size}")
     public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, InquiryNk inquiryNk) {
-        return inquiryNkService.findList(page,size,inquiryNk);
+        return inquiryNkService.findList(page, size, inquiryNk);
     }
 }

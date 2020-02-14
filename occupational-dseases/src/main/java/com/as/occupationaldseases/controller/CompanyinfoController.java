@@ -23,8 +23,8 @@ public class CompanyinfoController implements CompanyinfoApi {
 
     @Override
     @PutMapping("/update/{id}")//这里使用put方法，http 方法中put表示更新
-    public CompanyinfoResult update(@PathVariable("id")int id,@RequestBody Companyinfo companyinfo) {
-        return companyinfoService.update(id,companyinfo);
+    public CompanyinfoResult update(@PathVariable("id") int id, @RequestBody Companyinfo companyinfo) {
+        return companyinfoService.update(id, companyinfo);
     }
 
     @Override
@@ -35,8 +35,8 @@ public class CompanyinfoController implements CompanyinfoApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page")int page,@PathVariable("size") int size,@RequestBody Companyinfo companyinfo) {
-        return companyinfoService.findList(page,size,companyinfo);
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody Companyinfo companyinfo) {
+        return companyinfoService.findList(page, size, companyinfo);
     }
 
     @Override

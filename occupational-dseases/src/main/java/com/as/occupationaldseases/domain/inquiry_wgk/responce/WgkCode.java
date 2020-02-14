@@ -5,8 +5,8 @@ import lombok.ToString;
 
 @ToString
 public enum WgkCode implements ResultCode {
-    Wgk_NOTEXISTS(false,14001,"不存在！"),
-    Wgk_ADD_EXISTSNAME(false,14002,"已存在！");
+    Wgk_NOTEXISTS(false, 14001, "不存在！"),
+    Wgk_ADD_EXISTSNAME(false, 14002, "已存在！");
     //    private static ImmutableMap<Integer, CommonCode> codes ;
     //操作是否成功
     boolean success;
@@ -14,7 +14,8 @@ public enum WgkCode implements ResultCode {
     int code;
     //提示信息
     String message;
-    private WgkCode(boolean success, int code, String message){
+
+    private WgkCode(boolean success, int code, String message) {
         this.success = success;
         this.code = code;
         this.message = message;
@@ -24,6 +25,7 @@ public enum WgkCode implements ResultCode {
     public boolean success() {
         return success;
     }
+
     @Override
     public int code() {
         return code;

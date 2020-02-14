@@ -20,20 +20,20 @@ public class HazardinfoContorller implements HazardinfoApi {
 
     @Override
     @PutMapping("/update/{id}")//这里使用put方法，http 方法中put表示更新
-    public HazardinfoResult update(@PathVariable("id")int id, @RequestBody Hazardinfo hazardinfo) {
-        return hazardinfoService.update(id,hazardinfo);
+    public HazardinfoResult update(@PathVariable("id") int id, @RequestBody Hazardinfo hazardinfo) {
+        return hazardinfoService.update(id, hazardinfo);
     }
 
     @Override
     @DeleteMapping("/del/{id}")
-    public HazardinfoResult delete(@PathVariable("id")int id) {
+    public HazardinfoResult delete(@PathVariable("id") int id) {
         return hazardinfoService.delete(id);
     }
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page,@PathVariable("size") int size,@RequestBody Hazardinfo hazardinfo) {
-        return hazardinfoService.findList(page,size,hazardinfo);
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody Hazardinfo hazardinfo) {
+        return hazardinfoService.findList(page, size, hazardinfo);
     }
 
     @Override

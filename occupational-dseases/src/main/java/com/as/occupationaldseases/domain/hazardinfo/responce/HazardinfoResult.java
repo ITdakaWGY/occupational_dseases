@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class HazardinfoResult extends ResponseResult {
     Hazardinfo hazardinfo;
+
     public HazardinfoResult(ResultCode resultCode, Hazardinfo hazardinfo) {
         super(resultCode);
         this.hazardinfo = hazardinfo;

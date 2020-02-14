@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DiseaseDeviceResult extends ResponseResult {
     DiseaseDevice diseaseDevice;
+
     public DiseaseDeviceResult(ResultCode resultCode, DiseaseDevice diseaseDevice) {
         super(resultCode);
         this.diseaseDevice = diseaseDevice;

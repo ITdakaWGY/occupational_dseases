@@ -6,9 +6,9 @@ import lombok.ToString;
 
 @ToString
 public enum DiseaseItemCode implements ResultCode {
-    DISEASEITEM_NOTEXISTS(false,23001,"个人体检项目进度不存在！"),
-    DISEASEITEM_ADD_EXISTSNAME(false,23002,"个人体检项目进度已存在！"),
-    DISEASEITEM_GREATERTHAN(false,23003,"查询数据大于一");
+    DISEASEITEM_NOTEXISTS(false, 23001, "个人体检项目进度不存在！"),
+    DISEASEITEM_ADD_EXISTSNAME(false, 23002, "个人体检项目进度已存在！"),
+    DISEASEITEM_GREATERTHAN(false, 23003, "查询数据大于一");
     //    private static ImmutableMap<Integer, CommonCode> codes ;
     //操作是否成功
     boolean success;
@@ -16,7 +16,8 @@ public enum DiseaseItemCode implements ResultCode {
     int code;
     //提示信息
     String message;
-    private DiseaseItemCode(boolean success, int code, String message){
+
+    private DiseaseItemCode(boolean success, int code, String message) {
         this.success = success;
         this.code = code;
         this.message = message;
@@ -26,6 +27,7 @@ public enum DiseaseItemCode implements ResultCode {
     public boolean success() {
         return success;
     }
+
     @Override
     public int code() {
         return code;

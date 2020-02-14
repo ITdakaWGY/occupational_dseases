@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CompanyinfoResult extends ResponseResult {
     Companyinfo companyinfo;
+
     public CompanyinfoResult(ResultCode resultCode, Companyinfo companyinfo) {
         super(resultCode);
         this.companyinfo = companyinfo;

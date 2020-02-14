@@ -21,7 +21,7 @@ public class DiseaseItemController implements DiseaseItemApi {
     @Override
     @PutMapping("/update/{id}")//这里使用put方法，http 方法中put表示更新
     public DiseaseItemResult update(@PathVariable("id") int id, @RequestBody DiseaseItem diseaseItem) {
-        return diseaseItemService.update(id,diseaseItem);
+        return diseaseItemService.update(id, diseaseItem);
     }
 
     @Override
@@ -32,8 +32,8 @@ public class DiseaseItemController implements DiseaseItemApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page,@PathVariable("size") int size,@RequestBody DiseaseItem diseaseItem) {
-        return diseaseItemService.findList(page,size,diseaseItem);
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody DiseaseItem diseaseItem) {
+        return diseaseItemService.findList(page, size, diseaseItem);
     }
 
     @Override

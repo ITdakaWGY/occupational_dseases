@@ -32,16 +32,17 @@ public interface HazardinfoApi {
 
     /**
      * 分页查询方法
-     * @param current 页码，从1开始记数
-     * @param size 每页记录数
+     *
+     * @param current    页码，从1开始记数
+     * @param size       每页记录数
      * @param hazardinfo 查询条件
      * @return
      */
     //页面查询
     @ApiOperation("分页查询")
     @ApiImplicitParams({
-            @ApiImplicitParam(name="page",value = "页码",required=true,paramType="path",dataType="int"),
-            @ApiImplicitParam(name="size",value = "每页记录数",required=true,paramType="path",dataType="int")
+            @ApiImplicitParam(name = "page", value = "页码", required = true, paramType = "path", dataType = "int"),
+            @ApiImplicitParam(name = "size", value = "每页记录数", required = true, paramType = "path", dataType = "int")
     })
     public QueryResponseResult findList(int current, int size, Hazardinfo hazardinfo);
 
@@ -49,7 +50,6 @@ public interface HazardinfoApi {
     //查询单条数据
     @ApiOperation("查询单条数据")
     public HazardinfoResult findBySingle(Hazardinfo hazardinfo);
-
 
 
     //根据条件查询数据条数

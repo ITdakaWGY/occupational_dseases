@@ -21,20 +21,20 @@ public class JobinfoContorller implements JobinfoApi {
 
     @Override
     @PutMapping("/update/{id}")//这里使用put方法，http 方法中put表示更新
-    public JobinfoResult update(@PathVariable("id")int id, @RequestBody Jobinfo jobinfo) {
-        return jobinfoService.update(id,jobinfo);
+    public JobinfoResult update(@PathVariable("id") int id, @RequestBody Jobinfo jobinfo) {
+        return jobinfoService.update(id, jobinfo);
     }
 
     @Override
     @DeleteMapping("/del/{id}")
-    public JobinfoResult delete(@PathVariable("id")int id) {
+    public JobinfoResult delete(@PathVariable("id") int id) {
         return jobinfoService.delete(id);
     }
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page")int page,@PathVariable("size") int size, @RequestBody Jobinfo jobinfo) {
-        return jobinfoService.findList(page,size,jobinfo);
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody Jobinfo jobinfo) {
+        return jobinfoService.findList(page, size, jobinfo);
     }
 
     @Override

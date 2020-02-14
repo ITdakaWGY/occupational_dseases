@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class WgkResult extends ResponseResult {
     InquiryWgk inquiryWgk;
+
     public WgkResult(ResultCode resultCode, InquiryWgk inquiryWgk) {
         super(resultCode);
         this.inquiryWgk = inquiryWgk;

@@ -29,23 +29,23 @@ public class UserTests {
         user.setRemark("喝酱油的");
 
         int insert = userMapper.insert(user);
-        Assert.assertEquals(insert , 1);
+        Assert.assertEquals(insert, 1);
 
     }
 
     @Test
-    public void testSelect(){
+    public void testSelect() {
         List<User> users = userMapper.selectList(null);
         users.forEach(System.out::println);
         Assert.assertEquals(2, users.size());
     }
 
     @Test
-    public void queryUserForPage(){
+    public void queryUserForPage() {
         IPage<User> userPage = new Page<>(0, 2);//参数一是当前页，参数二是每页个数
         userPage = userMapper.selectPage(userPage, null);
         List<User> list = userPage.getRecords();
-        for(User user : list){
+        for (User user : list) {
             System.out.println(user);
         }
     }

@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class JobinfoResult extends ResponseResult {
     Jobinfo jobinfo;
+
     public JobinfoResult(ResultCode resultCode, Jobinfo jobinfo) {
         super(resultCode);
         this.jobinfo = jobinfo;

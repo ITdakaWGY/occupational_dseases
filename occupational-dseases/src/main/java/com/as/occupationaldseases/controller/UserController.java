@@ -23,7 +23,7 @@ public class UserController implements UserApi {
 
     @Override
     @PutMapping("/edit/{id}")//这里使用put方法，http 方法中put表示更新
-    public UserResult edit(@PathVariable("id")Long id, @RequestBody User user) {
+    public UserResult edit(@PathVariable("id") Long id, @RequestBody User user) {
         return userService.update(id, user);
     }
 
@@ -35,7 +35,7 @@ public class UserController implements UserApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page,@PathVariable("size") int size, User user) {
-        return userService.findList(page,size,user);
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, User user) {
+        return userService.findList(page, size, user);
     }
 }

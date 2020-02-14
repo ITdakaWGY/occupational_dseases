@@ -6,9 +6,9 @@ import lombok.ToString;
 
 @ToString
 public enum HazardinfoCode implements ResultCode {
-    HAZARDINFO_NOTEXISTS(false,22001,"个人体检项目进度不存在！"),
-    HAZARDINFO_ADD_EXISTSNAME(false,22002,"个人体检项目进度已存在！"),
-    HAZARDINFO_GREATERTHAN(false,22003,"查询数据大于一");
+    HAZARDINFO_NOTEXISTS(false, 22001, "个人体检项目进度不存在！"),
+    HAZARDINFO_ADD_EXISTSNAME(false, 22002, "个人体检项目进度已存在！"),
+    HAZARDINFO_GREATERTHAN(false, 22003, "查询数据大于一");
     //    private static ImmutableMap<Integer, CommonCode> codes ;
     //操作是否成功
     boolean success;
@@ -16,7 +16,8 @@ public enum HazardinfoCode implements ResultCode {
     int code;
     //提示信息
     String message;
-    private HazardinfoCode(boolean success, int code, String message){
+
+    private HazardinfoCode(boolean success, int code, String message) {
         this.success = success;
         this.code = code;
         this.message = message;
@@ -26,6 +27,7 @@ public enum HazardinfoCode implements ResultCode {
     public boolean success() {
         return success;
     }
+
     @Override
     public int code() {
         return code;
