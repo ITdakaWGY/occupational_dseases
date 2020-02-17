@@ -94,6 +94,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--打包-->
+                <configuration>
+                    <mainClass>com.as.occupationaldseases.OccupationalDseasesApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

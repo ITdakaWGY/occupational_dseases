@@ -8,6 +8,9 @@ import com.as.occupationaldseases.service.DiseaseItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
+@CrossOrigin
+@RequestMapping("/DiseaseItem")
 public class DiseaseItemController implements DiseaseItemApi {
     @Autowired
     private DiseaseItemService diseaseItemService;

@@ -8,6 +8,9 @@ import com.as.occupationaldseases.service.HazardinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
+@CrossOrigin
+@RequestMapping("/Hazardinfo")
 public class HazardinfoContorller implements HazardinfoApi {
     @Autowired
     private HazardinfoService hazardinfoService;

@@ -8,6 +8,9 @@ import com.as.occupationaldseases.service.JobinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
+@CrossOrigin
+@RequestMapping("/Jobinfo")
 public class JobinfoContorller implements JobinfoApi {
 
     @Autowired
