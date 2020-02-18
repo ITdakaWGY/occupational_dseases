@@ -36,7 +36,7 @@ public class JobinfoContorller implements JobinfoApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody Jobinfo jobinfo) {
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size,Jobinfo jobinfo) {
         return jobinfoService.findList(page, size, jobinfo);
     }
 
@@ -48,7 +48,7 @@ public class JobinfoContorller implements JobinfoApi {
 
     @Override
     @GetMapping("/count")
-    public Integer count(@RequestBody Jobinfo jobinfo) {
+    public Integer count(Jobinfo jobinfo) {
         return jobinfoService.count(jobinfo);
     }
 }

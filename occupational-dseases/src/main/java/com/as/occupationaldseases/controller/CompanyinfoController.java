@@ -36,7 +36,7 @@ public class CompanyinfoController implements CompanyinfoApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody Companyinfo companyinfo) {
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, Companyinfo companyinfo) {
         return companyinfoService.findList(page, size, companyinfo);
     }
 
@@ -48,7 +48,7 @@ public class CompanyinfoController implements CompanyinfoApi {
 
     @Override
     @GetMapping("/count")
-    public Integer count(@RequestBody Companyinfo companyinfo) {
+    public Integer count(Companyinfo companyinfo) {
         return companyinfoService.count(companyinfo);
     }
 }

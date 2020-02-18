@@ -36,7 +36,7 @@ public class DiseaseDeviceController implements DiseaseDeviceApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody DiseaseDevice diseaseDevice) {
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size,DiseaseDevice diseaseDevice) {
         return diseaseDeviceService.findList(page, size, diseaseDevice);
     }
 
@@ -48,7 +48,7 @@ public class DiseaseDeviceController implements DiseaseDeviceApi {
 
     @Override
     @GetMapping("/count")
-    public Integer count(@RequestBody DiseaseDevice diseaseDevice) {
+    public Integer count(DiseaseDevice diseaseDevice) {
         return diseaseDeviceService.count(diseaseDevice);
     }
 }

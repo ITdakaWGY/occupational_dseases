@@ -35,7 +35,7 @@ public class HazardinfoContorller implements HazardinfoApi {
 
     @Override
     @GetMapping("/list/{page}/{size}")
-    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, @RequestBody Hazardinfo hazardinfo) {
+    public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size,Hazardinfo hazardinfo) {
         return hazardinfoService.findList(page, size, hazardinfo);
     }
 
@@ -47,7 +47,7 @@ public class HazardinfoContorller implements HazardinfoApi {
 
     @Override
     @GetMapping("/count")
-    public Integer count(@RequestBody Hazardinfo hazardinfo) {
+    public Integer count(Hazardinfo hazardinfo) {
         return hazardinfoService.count(hazardinfo);
     }
 }
