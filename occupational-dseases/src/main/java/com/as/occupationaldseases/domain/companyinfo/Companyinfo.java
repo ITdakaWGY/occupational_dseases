@@ -29,7 +29,7 @@ public class Companyinfo {
     private String staffnumber;
     @ApiModelProperty("公司编号")
     private String companycode;
-    @ApiModelProperty("行业类型/大中小微")
+    @ApiModelProperty("企业规模(大中小微)")
     private String companytype;
     @ApiModelProperty("法人")
     private String legalperson;
@@ -59,5 +59,8 @@ public class Companyinfo {
     private String res4;
     @ApiModelProperty("res5")
     private String res5;
-
+    @ApiModelProperty("行业类型")
+    private String Industrypaging;
+    @ApiModelProperty("职业病危害因素种类其他描述")
+    private String harmtypeqt;
 }
