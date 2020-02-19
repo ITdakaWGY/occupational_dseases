@@ -63,8 +63,8 @@ public class Companyinfo {
     private String res4;
     @ApiModelProperty("res5")
     private String res5;
-    @ApiModelProperty("检测报告名称以及编号其他")
-    private String harmevaluatenamecodeother;
+    @ApiModelProperty("职业病危害因素种类其他描述")
+    private String harmtypeqt;
 
     public Integer getId() {
         return id;
@@ -250,21 +250,20 @@ public class Companyinfo {
         this.res5 = res5;
     }
 
-    public String getHarmevaluatenamecodeother() {
-        return harmevaluatenamecodeother;
-    }
-
-    public void setHarmevaluatenamecodeother(String harmevaluatenamecodeother) {
-        this.harmevaluatenamecodeother = harmevaluatenamecodeother;
-    }
-
-
     public String getIndustrypaging() {
         return Industrypaging;
     }
 
     public void setIndustrypaging(String industrypaging) {
         Industrypaging = industrypaging;
+    }
+
+    public String getHarmtypeqt() {
+        return harmtypeqt;
+    }
+
+    public void setHarmtypeqt(String harmtypeqt) {
+        this.harmtypeqt = harmtypeqt;
     }
 
     @Override
@@ -294,7 +293,7 @@ public class Companyinfo {
                 ", res3='" + res3 + '\'' +
                 ", res4='" + res4 + '\'' +
                 ", res5='" + res5 + '\'' +
-                ", harmevaluatenamecodeother='" + harmevaluatenamecodeother + '\'' +
+                ", harmtypeqt='" + harmtypeqt + '\'' +
                 '}';
     }
 }
