@@ -60,7 +60,7 @@ public class Companyinfo {
     @ApiModelProperty("res5")
     private String res5;
     @ApiModelProperty("行业类型")
-    private String Industrypaging;
+    private String industrypaging;
     @ApiModelProperty("职业病危害因素种类其他描述")
     private String harmtypeqt;
 }
