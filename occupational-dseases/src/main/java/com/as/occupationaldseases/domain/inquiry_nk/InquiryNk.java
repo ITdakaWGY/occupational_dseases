@@ -20,6 +20,8 @@ public class InquiryNk {
     private String personalid;
     @ApiModelProperty("条码号")
     private String tmh;
+    @ApiModelProperty("体检标识")
+    private String tjflag;
     @ApiModelProperty("胸廓")
     private String xk;
     @ApiModelProperty("胸廓其他")

@@ -18,6 +18,8 @@ public class InquirySjk {
     private String personalid;
     @ApiModelProperty("条码号")
     private String tmh;
+    @ApiModelProperty("体检标识")
+    private String tjflag;
     @ApiModelProperty("肌萎缩")
     private String jws;
     @ApiModelProperty("肌萎缩描述")

@@ -29,8 +29,10 @@ public class Companyinfo {
     private String staffnumber;
     @ApiModelProperty("公司编号")
     private String companycode;
-    @ApiModelProperty("行业类型/大中小微")
+    @ApiModelProperty("企业规模(大中小微)")
     private String companytype;
+    @ApiModelProperty("行业类型")
+    private String Industrypaging;
     @ApiModelProperty("法人")
     private String legalperson;
     @ApiModelProperty("负责人")
@@ -61,6 +63,8 @@ public class Companyinfo {
     private String res4;
     @ApiModelProperty("res5")
     private String res5;
+    @ApiModelProperty("检测报告名称以及编号其他")
+    private String harmevaluatenamecodeother;
 
     public Integer getId() {
         return id;
@@ -246,6 +250,23 @@ public class Companyinfo {
         this.res5 = res5;
     }
 
+    public String getHarmevaluatenamecodeother() {
+        return harmevaluatenamecodeother;
+    }
+
+    public void setHarmevaluatenamecodeother(String harmevaluatenamecodeother) {
+        this.harmevaluatenamecodeother = harmevaluatenamecodeother;
+    }
+
+
+    public String getIndustrypaging() {
+        return Industrypaging;
+    }
+
+    public void setIndustrypaging(String industrypaging) {
+        Industrypaging = industrypaging;
+    }
+
     @Override
     public String toString() {
         return "Companyinfo{" +
@@ -257,6 +278,7 @@ public class Companyinfo {
                 ", staffnumber='" + staffnumber + '\'' +
                 ", companycode='" + companycode + '\'' +
                 ", companytype='" + companytype + '\'' +
+                ", Industrypaging='" + Industrypaging + '\'' +
                 ", legalperson='" + legalperson + '\'' +
                 ", principal='" + principal + '\'' +
                 ", risktype='" + risktype + '\'' +
@@ -272,6 +294,7 @@ public class Companyinfo {
                 ", res3='" + res3 + '\'' +
                 ", res4='" + res4 + '\'' +
                 ", res5='" + res5 + '\'' +
+                ", harmevaluatenamecodeother='" + harmevaluatenamecodeother + '\'' +
                 '}';
     }
 }

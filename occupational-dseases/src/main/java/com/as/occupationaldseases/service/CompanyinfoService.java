@@ -89,7 +89,7 @@ public class CompanyinfoService {
         if (current <= 0) {
             current = 1;
         }
-        current = current - 1;
+//        current = current - 1;
 
         if (size <= 0) {
             size = 10;

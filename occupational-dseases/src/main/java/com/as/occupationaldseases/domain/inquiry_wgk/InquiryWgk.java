@@ -18,6 +18,8 @@ public class InquiryWgk {
     private String personalid;
     @ApiModelProperty("条码号")
     private String tmh;
+    @ApiModelProperty("体检标识")
+    private String tjflag;
     @ApiModelProperty("左眼视力")
     private String zysl;
     @ApiModelProperty("有眼视力")

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨域测试</title>
+</head>
+<body>
+<script src="jquery-3.4.1.min.js"></script>
+<input type="button" value="查询数据" onclick="submitData()">
+</body>
+<script>
+    function submitData() {
+        $.ajax({
+            url:"http://60.216.10.28:8081/InquiryWk/list/1/10",
+            type:"get",
+            data:{
+                name:"测试跨域"
+            },
+            success:function (data) {
+                alert(data);
+            }
+        })
+    }
+
+</script>
+</html>
