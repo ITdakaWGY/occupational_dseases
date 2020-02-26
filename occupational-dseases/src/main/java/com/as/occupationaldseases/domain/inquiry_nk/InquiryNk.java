@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Date;
+
 @Data
 @ToString
 @TableName("inquiry_nk")
@@ -76,6 +78,9 @@ public class InquiryNk {
     private String ysqz;
     @ApiModelProperty("医师签字URL")
     private String ysqzurl;
+    @ApiModelProperty("创建时间")
+    @TableField("createtime")
+    private Date createtime;
     private String res1;
     private String res2;
     private String res3;

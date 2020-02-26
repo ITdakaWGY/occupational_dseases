@@ -41,6 +41,8 @@ public class Companyinfo {
     private String harmperson;
     @ApiModelProperty("危害种类")
     private String harmtype;
+    @ApiModelProperty("职业病危害因素种类其他描述")
+    private String harmtypeqt;
     @ApiModelProperty("职业病危害检测报告类型")
     private String harmevaluatetype;
     @ApiModelProperty("检测报告名称以及编号")
@@ -61,6 +63,5 @@ public class Companyinfo {
     private String res5;
     @ApiModelProperty("行业类型")
     private String industrypaging;
-    @ApiModelProperty("职业病危害因素种类其他描述")
-    private String harmtypeqt;
+
 }

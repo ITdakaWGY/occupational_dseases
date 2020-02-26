@@ -1,11 +1,14 @@
 package com.as.occupationaldseases.domain.inquiry_wgk;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.Date;
 
 @Data
 @ToString
@@ -116,6 +119,9 @@ public class InquiryWgk {
     private String ysqz;
     @ApiModelProperty(" ")
     private String ysqzurl;
+    @ApiModelProperty("创建时间")
+    @TableField("createtime")
+    private Date createtime;
     private String res1;
     private String res2;
     private String res3;
