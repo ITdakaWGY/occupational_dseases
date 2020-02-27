@@ -30,7 +30,7 @@ public class InquiryNk {
     private String tmh;
     @ApiModelProperty("体检标识")
     private String tjflag;
-    @ApiModelProperty("胸廓")
+    @ApiModelProperty("胸廓(1、正常2、扁平胸3、桶状胸4、其他)")
     private String xk;
     @ApiModelProperty("胸廓其他")
     private String xkqt;
@@ -38,43 +38,43 @@ public class InquiryNk {
     private String xkbz;
     @ApiModelProperty("心率次数")
     private String xlnumber;
-    @ApiModelProperty("心率情况")
+    @ApiModelProperty("心率情况(1、齐2、不齐3、绝对不齐)")
     private String xlqk;
-    @ApiModelProperty("杂音")
+    @ApiModelProperty("杂音(1、无2、有)")
     private String zy;
     @ApiModelProperty("杂音描述")
     private String zyms;
     @ApiModelProperty("心脏备注")
     private String xzbz;
-    @ApiModelProperty("呼吸音")
+    @ApiModelProperty("呼吸音(1、正常2、异常)")
     private String hxy;
     @ApiModelProperty("呼吸音描述")
     private String hxyms;
     @ApiModelProperty("呼吸音备注")
     private String hxybz;
-    @ApiModelProperty("罗音")
+    @ApiModelProperty("罗音(1、无2、干罗音3、湿罗音4、其他)")
     private String ly;
     @ApiModelProperty("罗音描述")
     private String lyms;
     @ApiModelProperty("肺备注")
     private String fbz;
-    @ApiModelProperty("压痛")
+    @ApiModelProperty("压痛(1、无2、有)")
     private String yt;
     @ApiModelProperty("压痛描述")
     private String ytms;
-    @ApiModelProperty("包块")
+    @ApiModelProperty("包块(1、无2、有)")
     private String bk;
     @ApiModelProperty("包块描述")
     private String bkms;
-    @ApiModelProperty("肝大")
+    @ApiModelProperty("肝大(1、无2、有)")
     private String gd;
     @ApiModelProperty("肝大描述")
     private String dams;
-    @ApiModelProperty("脾大")
+    @ApiModelProperty("脾大(1、无2、有)")
     private String pd;
     @ApiModelProperty("脾大描述")
     private String pdms;
-    @ApiModelProperty("移动性浊音")
+    @ApiModelProperty("移动性浊音(1、无2、有)")
     private String ydxzy;
     @ApiModelProperty("浊音描述")
     private String ydxzyms;
