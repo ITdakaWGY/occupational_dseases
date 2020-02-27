@@ -17,6 +17,12 @@ public class InquiryWk {
     @ApiModelProperty("主键")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    @ApiModelProperty("身份证")
+    private String sfz;
+    @ApiModelProperty("姓名")
+    private String xm;
+    @ApiModelProperty("体检日期")
+    private Date tjrq;
     @ApiModelProperty("用户id")
     private String personalid;
     @ApiModelProperty("条码号")

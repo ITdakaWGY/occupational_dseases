@@ -17,6 +17,12 @@ public class InquirySjk {
     @ApiModelProperty("主键")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    @ApiModelProperty("身份证")
+    private String sfz;
+    @ApiModelProperty("姓名")
+    private String xm;
+    @ApiModelProperty("体检日期")
+    private Date tjrq;
     @ApiModelProperty("用户id")
     private String personalid;
     @ApiModelProperty("条码号")
@@ -35,6 +41,12 @@ public class InquirySjk {
     private String jlms;
     @ApiModelProperty("肌力备注")
     private String jlbz;
+    @ApiModelProperty("肌张力")
+    private String jzl;
+    @ApiModelProperty("肌张力描述")
+    private String jzlms;
+    @ApiModelProperty("肌张力备注")
+    private String jzlbz;
     @ApiModelProperty("三颤")
     private String sc;
     @ApiModelProperty("三颤描述")
@@ -57,6 +69,12 @@ public class InquirySjk {
     private String cjms;
     @ApiModelProperty("浅感觉备注")
     private String qgnbz;
+    @ApiModelProperty("深感觉")
+    private String sgj;
+    @ApiModelProperty("深感觉描述")
+    private String sgjms;
+    @ApiModelProperty("深感觉备注")
+    private String sgjbz;
     @ApiModelProperty("腱反射")
     private String jfs;
     @ApiModelProperty("腱反射备注")
@@ -67,6 +85,8 @@ public class InquirySjk {
     private String blfsbz;
     @ApiModelProperty("自主神经")
     private String zzsj;
+    @ApiModelProperty("自主神经描述")
+    private String zzsjms;
     @ApiModelProperty("自主神经备注")
     private String zzsjbz;
     @ApiModelProperty("医师签字")
