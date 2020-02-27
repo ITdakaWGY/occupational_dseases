@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Date;
+
 @Data
 @ToString
 @TableName("inquiry_wk")
@@ -20,7 +22,7 @@ public class InquiryWk {
     @ApiModelProperty("姓名")
     private String xm;
     @ApiModelProperty("体检日期")
-    private String tjrq;
+    private Date tjrq;
     @ApiModelProperty("用户id")
     private String personalid;
     @ApiModelProperty("条码号")
@@ -47,7 +49,7 @@ public class InquiryWk {
     private String ysqzurl;
     @ApiModelProperty("创建时间")
     @TableField("createtime")
-    private String createtime;
+    private Date createtime;
     private String res1;
     private String res2;
     private String res3;
