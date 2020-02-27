@@ -15,6 +15,12 @@ public class InquiryNk {
     @ApiModelProperty("主键")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    @ApiModelProperty("身份证")
+    private String sfz;
+    @ApiModelProperty("姓名")
+    private String xm;
+    @ApiModelProperty("体检日期")
+    private String tjrq;
     @ApiModelProperty("用户id")
     @TableField("personalid")
     private String personalid;
@@ -76,6 +82,9 @@ public class InquiryNk {
     private String ysqz;
     @ApiModelProperty("医师签字URL")
     private String ysqzurl;
+    @ApiModelProperty("创建时间")
+    @TableField("createtime")
+    private String createtime;
     private String res1;
     private String res2;
     private String res3;
