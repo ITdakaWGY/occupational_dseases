@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>体检项目信息管理</title>
+		<script src="../../js/jquery-3.2.1.min.js"></script>
+		<script src="../../layui/layui.js"></script>
+		<link href="../../layui/css/layui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/newWrap.css" />
+		<script>
+			document.write('<script src="../../js/wrap.js?v=' + Math.random() + '"><\/script>');
+		</script>
+	</head>
+	<body>
+		<div class="rightZTop">
+			<div class="layui-row">
+				<div class="line-shai">
+					<a name="card">筛选条件</a>
+				</div>
+				<p class="clear"></p>
+				<div class="layui-row layui-form layui-flex">
+					<div class="layui-form-item inputWrap1">
+						<input required lay-verify="required" placeholder="请输入项目名称" autocomplete="off" class="layui-input" id="name">
+					</div>
+					<div class="layui-form-item inputWrap1">
+						<span class="layui-btn chaxunBtn" id="searchBtn">查询</span>
+						
+						<span class="layui-btn chaxunBtn" id="AddBtn">新增</span>
+					</div>
+				</div>
+				<!-- <div class="line5"></div>
+				<div class="btnAll layui-form-item">
+					
+				</div> -->
+				<div class="tableTop">
+					<table class="layui-table">
+						<thead>
+							<tr>
+								<th>编号</th>
+								<th>名称</th>
+								<th>所属机构</th>
+								<th>价格</th>
+								<th>状态</th>
+								<th>备注</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01</td>
+								<td>血液检测</td>
+								<td>临沂青年社区卫生服务中心</td>
+								<td>123</td>
+								<td>已生效</td>
+								<td>血液常规检测项目</td>
+								<th>
+									<span class="layui-btn chaxunBtn lookTjzb" data-id="10">查看指标</span>
+									<span class="layui-btn chaxunBtn addTjzb" data-id="10">新增指标</span>
+									<span class="layui-btn chaxunBtn editBtn" data-id="10">修改</span>
+									<span class="layui-btn chaxunBtn deleteBtn" data-id="10">删除</span>
+								</th>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+		<script src="../../js/yewu/tjxm/tjxmList.js"></script>
+	</body>
+</html>

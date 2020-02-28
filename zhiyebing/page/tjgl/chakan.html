@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>症状信息采集</title>
+		<script src="../../js/jquery-3.2.1.min.js"></script>
+		<script src="../../layui/layui.js"></script>
+		<link href="../../layui/css/layui.css" rel="stylesheet" />
+		<script>
+			document.write('<link rel="stylesheet" type="text/css" href="../../css/newWrap.css?v=' + Math.random() + '" />');
+		</script>
+		<script>
+			document.write('<script src="../../js/wrap.js?v=' + Math.random() + '"><\/script>');
+		</script>
+		<style type="text/css">
+			
+			page[size="A4"] {
+			  background: white;
+			  width: 21cm;
+			  height: 29.7cm;
+			  display: block;
+			  margin: 0 auto;
+			  margin-bottom: 0.5cm;
+			  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5); position: relative;
+			}
+			@media print {
+			  body, page[size="A4"] {
+			    margin: 0;
+			    box-shadow: 0;
+			  }
+			}
+			.topDayin{width: 200px; float: right; font-size: 14px; line-height: 30px; padding-top: 80px;}
+			.topDayin i{ font-style: normal; border-bottom: 1px solid #333;}
+			.titleZy{ margin-top: 80%; position: absolute; text-align: center;width:100%; font-size: 30px; clear: both;}
+			.yinzhi{ position: absolute; bottom: 80px; text-align: center; width:100%}
+			.jichuAA{ padding:0 20px; padding-top: 50px;}
+			.titleJichu{ padding: 10px 0;}
+			.jichuAA>p{ line-height: 35px;}
+			.jichuAA>p>i{ font-style: normal; border-bottom: 1px solid #333; padding: 0 8px; margin-right: 10px;}
+			.qianmingAA{padding:0 20px; padding-top: 50px;}
+			.qianmingAA>p{width:50%; float: left; line-height: 35px;}
+			.jibenAA{ border-top: 1px solid #333; padding-top: 20px; margin: 0 20px; margin-top: 20px;}
+		</style>
+	</head>
+
+	<body>
+		
+		
+		
+		<div class="rightZTop">
+			<page size="A4">
+				<div class="topDayin" >
+					姓名：<i>XXX</i><br>                 
+					单位：<i>XXXXXXXXXXX公司</i><br>
+					单位电话：<i>06357582256</i><br>
+					工号：<i>1245224</i><br>
+					编号：<i>5423532655</i><br>
+					填表日期:<i>2020-02-14</i><br>
+					类别：<i>上岗前（√）</i>
+				</div>
+				<p class="titleZy">职 业 健 康 检 查  表</p>
+				<p class="yinzhi">山东省卫生厅印制</p>
+				</page>
+				<page size="A4">
+					<div class="jichuAA" >
+						<h2 class="titleJichu">个人基本资料：</h2>
+						<p>姓 名：<i>张XXX</i>  性 别：<i>男</i>  出生日期：<i>1985年01月02日</i></p>
+						<p>出生地：<i>山东济南历城区</i>  民 族：<i>哈尼族</i> 个人联系电话：<i>18766666666</i></p>
+						<p>居民身份证号码：<i>371522111111111111</i></p>
+						<p>家庭地址：<i>山东济南历下区工业南路20120</i> 邮政编码：<i>252411</i></p>
+						<p>接触的（或拟接触的）职业病危害因素：<i>XXXXXXXXXXXXXXX</i></p>
+						<p>总工龄：<i>XXXX</i>   接害工龄：<i>XXXX</i></p>
+					</div>
+					<div class="jichuAA">
+						<h2 class="titleJichu">职业史（由受检者本人填写）：</h2>
+						<table class="layui-table">
+							<tr>
+							    <th>序号</th>
+							    <th>起止日期</th>
+							    <th>工作单位</th>
+							    <th>车间	</th>
+							    <th>工种</th>
+							    <th>有害因素</th>
+							    <th>防护措施</th>
+							  </tr>
+							  <tr>
+								<td>01</td>
+							    <td>2010/11/22-2222/11/22</td>
+							    <td>XXXXXXX公司</td>
+							    <td>操作间</td>
+							    <td>操作员</td>
+							    <td>XXXXXXXXXX</td>
+							    <td>XXXXXXX防护措施</td>
+							  </tr>
+							  <tr>
+							  	<td>02</td>
+							    <td>2010/11/22-2222/11/22</td>
+							    <td>XXXXXXX公司</td>
+							    <td>操作间</td>
+							    <td>操作员</td>
+							    <td>XXXXXXXXXX</td>
+							    <td>XXXXXXX防护措施</td>
+							   </tr>
+						</table>
+						<p>受检者签名:___________    </p>
+						
+					</div>
+					<div class="jichuAA">
+						<h2 class="titleJichu">急慢性职业病史</h2>
+						<p>病名：______________________                  诊断日期：___________   </p>
+						<p>诊断单位：______________________              是否痊愈：___________</p>
+						
+					</div>
+					<div class="qianmingAA">
+						<p>受检人签名：<br>
+						________年____月____日 </p>
+						<p>用人单位签章：<br>
+						________年____月____日 </p>
+						
+					</div>
+				</page>
+				<page size="A4">
+					<div class="jichuAA">
+						<p >一、既往病史:<i>XXXX,XXXXX、XXXXX、XXXXXXXXXXXXXXXXXXXXX</i></p>                                            
+                                          
+<p>二、月经及生育史：初潮<i>X</i>岁，经期<i>X</i>天，周期<i>XX</i>天，停经年龄<i>XX</i>岁。现有子女<i>XX</i>人，流产<i>X</i>次，早产<i>X</i>次，死产<i>X</i>次，异常胎<i>X</i>次，先天畸形<i>X</i>次。</p>
+<p>三、吸烟史：<i>经常吸烟</i> ，经常吸<i>X</i>包∕天、共<i>X</i>年</p>
+<p>四、饮酒史：<i>现在经常饮</i><i>X</i>ml∕日、饮酒种类<i>X</i>、共<i>X</i>年</p>
+<p>五、家族史：<i>XXXX,XXXXX、XXXXX、XXXXXXXXXXXXXXXXXXXXX</i></p>
+						
+					</div>
+					<div class="topDayin">
+						受检者签名：<i>XXX</i><br>
+						<i>XXXX</i>年<i>XX</i>月<i>XX</i>日<br>
+					</div>
+					<p class="clear"></p>
+					<div class="jibenAA">
+						（基本情况有无变化）
+						
+					</div>
+					<div class="topDayin">
+						受检者签名：<i>XXX</i><br>
+						<i>XXXX</i>年<i>XX</i>月<i>XX</i>日<br>
+					</div>
+					<p class="clear"></p>
+					<div class="jibenAA">
+						（基本情况有无变化）
+						
+					</div>
+					<div class="topDayin">
+						受检者签名：<i>XXX</i><br>
+						<i>XXXX</i>年<i>XX</i>月<i>XX</i>日<br>
+					</div>
+				</page>
+			<span class="layui-btn saveTijian">打印</span>
+		</div>
+			<script>
+				document.write('<script src="../../js/yewu/tjgl/zzxxcj.js?v=' + Math.random() + '"><\/script>')
+			</script>
+	</body>
+
+</html>
