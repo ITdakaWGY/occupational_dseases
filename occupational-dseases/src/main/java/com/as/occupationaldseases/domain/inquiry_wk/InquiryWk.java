@@ -29,13 +29,13 @@ public class InquiryWk {
     private String tmh;
     @ApiModelProperty("体检标识")
     private String tjflag;
-    @ApiModelProperty("甲状腺")
+    @ApiModelProperty("甲状腺(1、正常2、肿大)")
     private String jzx;
-    @ApiModelProperty("甲状腺描述")
+    @ApiModelProperty("甲状腺描述(I度、II度、III度)")
     private String jzxms;
     @ApiModelProperty("甲状腺备注")
     private String jxzbz;
-    @ApiModelProperty("浅表淋巴结")
+    @ApiModelProperty("浅表淋巴结(1、未触及2、锁骨上3、腋窝4、其他)")
     private String qblbj;
     @ApiModelProperty("浅表淋巴结描述")
     private String qblbjms;
