@@ -1,11 +1,14 @@
 package com.as.occupationaldseases.domain.inquiry_wgk;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.Date;
 
 @Data
 @ToString
@@ -14,6 +17,12 @@ public class InquiryWgk {
     @ApiModelProperty("主键")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    @ApiModelProperty("身份证")
+    private String sfz;
+    @ApiModelProperty("姓名")
+    private String xm;
+    @ApiModelProperty("体检日期")
+    private Date tjrq;
     @ApiModelProperty("用户id")
     private String personalid;
     @ApiModelProperty("条码号")
@@ -116,6 +125,8 @@ public class InquiryWgk {
     private String ysqz;
     @ApiModelProperty(" ")
     private String ysqzurl;
+    @ApiModelProperty("创建时间")
+    @TableField("createtime")
     private String res1;
     private String res2;
     private String res3;

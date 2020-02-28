@@ -91,6 +91,17 @@ public class InquiryWgkService {
             size = 10;
         }
 
+        //条件查询时传入空字符串时设置为null，不作为where条件
+        if (inquiryWgk.getTmh() == ""){
+            inquiryWgk.setTmh(null);
+        }
+        if (inquiryWgk.getXm() == ""){
+            inquiryWgk.setXm(null);
+        }
+        if (inquiryWgk.getSfz() == ""){
+            inquiryWgk.setSfz(null);
+        }
+
         IPage<InquiryWgk> page = new Page<>(current, size);
         QueryWrapper<InquiryWgk> wrapper = new QueryWrapper<>();
         wrapper.setEntity(inquiryWgk);
