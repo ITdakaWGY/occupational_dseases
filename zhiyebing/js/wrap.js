@@ -1,5 +1,4 @@
-// var BaseUrl = 'http://60.216.10.28:8181/';
-var BaseUrl = 'http://127.0.0.1:8181/';
+var BaseUrl = 'http://60.216.10.28:8181/';
 var pageSize = 10;
 $(function() {
 	var token = localStorage.getItem('token');
@@ -52,7 +51,7 @@ function getnull() {
 /*function loadPage(total,data) {
 	var totalPage = total % pageSize == 0 ? (total / pageSize) : (Math.floor(total / pageSize) + 1);
 	$("#pagination3").pagination({
-		//totalPage---总条数   isshow:是否显示上一页下一页 首页末页   cunt  渲染的页码展示总数
+		//totalPage---总条数   isshow:是否显示上一页下一页 首页末页   cunt  渲染的页码展示总数   
 		pageCount: total,
 		totalPage: totalPage,
 		isShow: true,
@@ -68,13 +67,36 @@ function getnull() {
 }*/
 
 //传入符合的数组，初始化checkbox----》 checkbox的name值需要与传入的数组名称保持一致
-function intCheckbox(dom,arry) {
+function intCheckbox(dom, arry) {
 	for(var i = 0; i < arry.length; i++) {
-		$('input[name="'+dom+'"]').each(function() {
+		$('input[name="' + dom + '"]').each(function() {
 			if($(this).val() == arry[i]) {
 				$(this).prop('checked', true);
 			}
 		})
 	}
-	debugger;
+}
+
+//初始化radio
+function intRadio(dom, str) {
+	$('input[name="' + dom + '"]').each(function() {
+		if($(this).val() == str) {
+			$(this).prop('checked', true);
+		}
+	})
+}
+//根据name与数据库字段保持统一，封装radio和input的值,input 需要添加属性data="data"，防止附表字段污染对象
+function returnData() {
+	var data = {};
+	$('input[data="data"]').each(function() {
+		data[$(this).attr('name')] = $(this).val();
+	})
+
+	$('input[data="radio"]').each(function() {
+		var _this=$(this);
+		if(_this.prop('checked')) {
+			data[_this.attr('name')] = _this.val();
+		}
+	})
+	return data;
 }

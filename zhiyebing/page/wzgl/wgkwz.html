@@ -23,26 +23,28 @@
 				</div>
 				<div class="layui-row layui-form layui-flex">
 					<div class="layui-form-item inputWrap1">
-						<input required lay-verify="required" placeholder="条码号" autocomplete="off" class="layui-input">
+						<input required lay-verify="required" placeholder="条码号" autocomplete="off" class="layui-input" id="sstmh">
 					</div>
 					<div class="layui-form-item inputWrap1">
-						<input required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+						<input required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input" id="ssxm" readonly="">
 					</div>
 					<div class="layui-form-item inputWrap1">
-						<input required lay-verify="required" placeholder="身份证号" autocomplete="off" class="layui-input">
+						<input required lay-verify="required" placeholder="身份证号" autocomplete="off" class="layui-input" id="sssfz">
 					</div>
-					
+
 					<div class="layui-form-item inputWrap1">
-						<input placeholder="体检日期" class="layui-input" id="tjrq">
+						<input placeholder="体检日期" class="layui-input" id="tjrq" readonly="">
 					</div>
 					<div class="layui-form-item inputWrap1">
 						<span class="layui-btn chaxunBtn" id="searchBtn">查询</span>
 					</div>
 				</div>
 				<div class="line5"></div>
-				<div class="btnAll layui-form-item">
-
-					<h3><b>体检人员信息：</b>张小花/男/371522222222222222/操作工</h3>
+				<div class="layui-form-item tjInfo">
+					<b class="fl">体检人员信息:</b>
+					<input type="text" class="layui-input width160 fl"  placeholder="条码号"  id="tmh" name="tmh"/>
+					<input type="text" class="layui-input width160 fl"  placeholder="姓名" id="xm" name="xm"/>
+					<input type="text" class="layui-input width160 fl"  placeholder="身份证" id="sfz" name="sfz"/>
 				</div>
 				<div>
 					<div class="leftTiJian">
@@ -64,6 +66,7 @@
 						</ul>
 
 					</div>
+					
 					<table class="layui-table layui-form layui-table-rightAA">
 						<thead>
 							<tr>
@@ -99,7 +102,7 @@
 								<td>晶体</td>
 								<td colspan="8">
 									<input type="radio" id="" name="jt" value="正常" title="正常">
-									<input type="radio" id="" name="jt" value="异常" title="异常"> 
+									<input type="radio" id="" name="jt" value="异常" title="异常">
 									<input type="text" id="jtms" name="jtms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="异常问题"></td>
 								<td>
 									<input type="text" id="jtbz" name="jtbz" value="" class="layui-input table-input" placeholder="晶体备注信息">
@@ -111,7 +114,7 @@
 								<td colspan="2">神经乳头</td>
 								<td colspan="6">
 									<input type="radio" id="" name="sjrt" value="正常" title="正常">
-									<input type="radio" id="" name="sjrt" value="异常" title="异常"> 
+									<input type="radio" id="" name="sjrt" value="异常" title="异常">
 									<input type="text" id="sjrtms" name="sjrtms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="神经乳头异常信息"></td>
 								<td rowspan="3">
 									<input type="text" id="ydbz" name="ydbz" value="" class="layui-input table-input" placeholder="眼底备注信息">
@@ -119,13 +122,15 @@
 							</tr>
 							<tr>
 								<td colspan="2">视网膜血管</td>
-								<td colspan="6"><input type="radio" id="" name="swmxg" value="正常" title="正常">
-									<input type="radio" id="" name="swmxg" value="异常" title="异常"> <input type="text" id="swmxgms" name="swmxgms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="视网膜血管异常问题"></td>
+								<td colspan="6">
+									<input type="radio" id="" name="swmxg" value="正常" title="正常">
+									<input type="radio" id="" name="swmxg" value="异常" title="异常"> 
+										<input type="text" id="swmxgms" name="swmxgms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="视网膜血管异常问题"></td>
 							</tr>
 							<tr>
 								<td colspan="2">黄斑区</td>
 								<td colspan="6"><input type="radio" id="" name="hbq" value="正常" title="正常">
-									<input type="radio" id="" name="hbq" value="异常" title="异常"> 
+									<input type="radio" id="" name="hbq" value="异常" title="异常">
 									<input type="text" id="hbqms" name="hbqms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="黄斑区异常问题"></td>
 							</tr>
 
@@ -140,7 +145,8 @@
 							</tr>
 							<tr>
 								<td colspan="2">外耳道</td>
-								<td colspan="6"><input type="radio" id="" name="wed" value="正常" title="正常">
+								<td colspan="6">
+									<input type="radio" id="" name="wed" value="正常" title="正常">
 									<input type="radio" id="" name="wed" value="异常" title="异常">
 									<input type="text" id="wedms" name="wedms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="外耳道异常问题"></td>
 							</tr>
@@ -176,8 +182,8 @@
 							<tr>
 								<td colspan="2">鼻腔粘膜</td>
 								<td colspan="6"><input type="radio" id="" name="bqnm" value="正常" title="正常">
-									<input type="radio" id="" name="bqnm" value="异常" title="异常"> 
-										<input type="text" id="bqnmms" name="bqnmms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="鼻腔粘膜异常问题"></td>
+									<input type="radio" id="" name="bqnm" value="异常" title="异常">
+									<input type="text" id="bqnmms" name="bqnmms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="鼻腔粘膜异常问题"></td>
 							</tr>
 							<tr>
 								<td colspan="2">鼻窦区压痛</td>
@@ -208,24 +214,24 @@
 									<div class="chilieyc">
 										<div class="widthbfb mt10" id="qcdoms">
 											缺齿: &nbsp;&nbsp; 左上
-											<input type="text" class="layui-input width80 dis-inline" /> &nbsp;&nbsp;左下
-											<input type="text" class="dis-inline layui-input width80" /> &nbsp;&nbsp;右上
-											<input type="text" class="dis-inline layui-input width80" /> &nbsp;&nbsp;右下
-											<input type="text" class="dis-inline layui-input width80" />
+											<input type="text" class="layui-input width80 dis-inline" name="qczs" /> &nbsp;&nbsp;左下
+											<input type="text" class="dis-inline layui-input width80" name="qczx"/> &nbsp;&nbsp;右上
+											<input type="text" class="dis-inline layui-input width80" name="qcys"/> &nbsp;&nbsp;右下
+											<input type="text" class="dis-inline layui-input width80" name="qcyx"/>
 										</div>
 										<div class="widthbfb mt10" id="jcdoms">
 											龋齿: &nbsp;&nbsp; 左上
-											<input type="text" class="layui-input width80 dis-inline" /> &nbsp;&nbsp;左下
-											<input type="text" class="dis-inline layui-input width80" /> &nbsp;&nbsp;右上
-											<input type="text" class="dis-inline layui-input width80" /> &nbsp;&nbsp;右下
-											<input type="text" class="dis-inline layui-input width80" />
+											<input type="text" class="layui-input width80 dis-inline" name="jczs"/> &nbsp;&nbsp;左下
+											<input type="text" class="dis-inline layui-input width80" name="jczx"/> &nbsp;&nbsp;右上
+											<input type="text" class="dis-inline layui-input width80" name="jcys"/> &nbsp;&nbsp;右下
+											<input type="text" class="dis-inline layui-input width80" name="jcyx"/>
 										</div>
 										<div class="widthbfb mt10" id="ycdoms">
 											义齿: &nbsp;&nbsp; 左上
-											<input type="text" class="layui-input width80 dis-inline" /> &nbsp;&nbsp;左下
-											<input type="text" class="dis-inline layui-input width80" /> &nbsp;&nbsp;右上
-											<input type="text" class="dis-inline layui-input width80" /> &nbsp;&nbsp;右下
-											<input type="text" class="dis-inline layui-input width80" />
+											<input type="text" class="layui-input width80 dis-inline" name="yczs"/> &nbsp;&nbsp;左下
+											<input type="text" class="dis-inline layui-input width80" name="yczx"/> &nbsp;&nbsp;右上
+											<input type="text" class="dis-inline layui-input width80" name="ycys"/> &nbsp;&nbsp;右下
+											<input type="text" class="dis-inline layui-input width80" name="ycyx"/>
 										</div>
 									</div>
 
@@ -244,8 +250,8 @@
 								<td colspan="2">咽部</td>
 								<td colspan="6">
 									<input type="radio" id="" name="yhyb" value="正常" title="正常">
-								<input type="radio" id="" name="yhyb" value="异常" title="异常">
-								<input type="text" id="yhybms" name="yhybms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="咽部异常问题"></td>
+									<input type="radio" id="" name="yhyb" value="异常" title="异常">
+									<input type="text" id="yhybms" name="yhybms" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="咽部异常问题"></td>
 								<td rowspan="3"><input type="text" id="yhbz" name="yhbz" value="" class="layui-input table-input" placeholder="咽喉备注信息"></td>
 							</tr>
 							<tr>
@@ -269,11 +275,10 @@
 									<input type="text" id="ysqz" name="ysqz" value="" class="layui-input table-input width160" style="display: inline-block;" placeholder="请输入医师姓名">
 									<!--<img src=""  class="ysqzurl" alt="医师签字图片"/>-->
 								</td>
-									<td>体检时间</td>
-										<td  colspan="4">
-											<input  placeholder="体检时间" autocomplete="off" class="layui-input width200" id="createtime">
-										</td>
-								
+								<td>体检时间</td>
+								<td colspan="4">
+									<input placeholder="体检时间" autocomplete="off" class="layui-input width200" id="createtime" name="createtime">
+								</td>
 
 							</tr>
 

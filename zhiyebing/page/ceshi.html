@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body>
+		<input type="text" value="aaa" name="a1" data="data" />
+		<input type="text" value="bbb" name="a2" data="data"/>
+		<input type="text" value="vvv" name="a3" data="data"/>
+		<input type="text" value="ccc" name="a4" data="data"/>
+		<input type="radio"  name="sex" value="nan" checked/>
+		<input type="radio"  name="sex" value="nv" />
+		<input type="radio"  name="sex" value="renyao" />
+		<input type="text" value="ddd" name="a5" data="data"/>
+		<input type="text" value="vvvvva" name="a6"/>
+		<input type="checkbox" value="341" name="a7" />
+		<input type="checkbox" value="334" name="a7" />
+		<input type="checkbox" value="34订单" name="a7" />
+		<input type="checkbox" value="34是的是的" name="a7" />
+		<span id="aadd">aaadddd</span>
+	</body>
+
+</html>
+
+<script>
+	$(function() {
+		$('#aadd').click(function() {
+			var data = returnData();
+			debugger;
+		})
+
+	})
+
+	function returnData() {
+		var data = {};
+		$('input[data="data"]').each(function() {
+			data[$(this).attr('name')] = $(this).val();
+		})
+
+		$('input[type="radio"]').each(function() {
+			if($(this).prop('checked')) {
+				data[$(this).attr('name')] = $(this).val();
+			}
+		})
+
+		return data;
+	}
+</script>

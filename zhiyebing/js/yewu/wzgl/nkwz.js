@@ -139,6 +139,7 @@ $(function() {
                 $('input[name="zyms"]').val(result[0].zyms);
                 $('input[name="xzbz"]').val(result[0].xzbz);
                 $('input[name="hxyms"]').val(result[0].hxyms);
+                $('input[name="hxybz"]').val(result[0].hxybz);
                 $('input[name="lyms"]').val(result[0].lyms);
                 $('input[name="fbz"]').val(result[0].fbz);
                 $('input[name="ytms"]').val(result[0].ytms);
