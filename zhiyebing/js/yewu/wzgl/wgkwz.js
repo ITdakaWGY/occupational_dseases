@@ -134,7 +134,7 @@ $(function() {
 							if(data.cl.indexOf('缺齿')>=0){
 								$('#qcdoms').show();
 							}
-							
+
 							if(data.cl.indexOf('龋齿')>=0){
 								$('#jcdoms').show();
 							}
@@ -164,71 +164,9 @@ $(function() {
 				shade: 0.2,
 				time: false
 			});
-			var params = {
-				tmh: $('input[name="tmh"]').val(),
-				xm: $('input[name="xm"]').val(),
-				sfz: $('input[name="sfz"]').val(),
-				zysl: $('input[name="zysl"]').val(),
-				yysl: $('input[name="yysl"]').val(),
-				zyjzsl: $('input[name="zyjzsl"]').val(),
-				yyjzsl: $('input[name="yyjzsl"]').val(),
-				slbz: $('input[name="slbz"]').val(),
-				wy: $('input[name="wy"]:checked').val(),
-				wyms: $('input[name="wyms"]').val(),
-				wybz: $('input[name="wybz"]').val(),
-				jt: $('input[name="jt"]:checked').val(),
-				jtms: $('input[name="jtms"]').val(),
-				jtbz: $('input[name="jtbz"]').val(),
-				sjrt: $('input[name="sjrt"]:checked').val(),
-				sjrtms: $('input[name="sjrtms"]').val(),
-				ydbz: $('input[name="ydbz"]').val(),
-				swmxg: $('input[name="swmxg"]:checked').val(),
-				swmxgms: $('input[name="swmxgms"]').val(),
-				hbq: $('input[name="hbq"]:checked').val(),
-				hbqms: $('input[name="hbqms"]').val(),
-				ek: $('input[name="ek"]:checked').val(),
-				ekms: $('input[name="ekms"]').val(),
-				webz: $('input[name="webz"]').val(),
-				wed: $('input[name="wed"]:checked').val(),
-				wedms: $('input[name="wedms"]').val(),
-				ztl: $('input[name="ztl"]').val(),
-				ytl: $('input[name="ytl"]').val(),
-				tlbz: $('input[name="tlbz"]').val(),
-				bwx: $('input[name="bwx"]:checked').val(),
-				bzg: $('input[name="bzg"]:checked').val(),
-				bqnm: $('input[name="bqnm"]:checked').val(),
-				bqnmms:$('input[name="bqnmms"]').val(),
-				bdqyt: $('input[name="bdqyt"]:checked').val(),
-				kc: $('input[name="kc"]:checked').val(),
-				cl: getCheckArry('cl'),
-				kqyb: $('input[name="kqyb"]:checked').val(),
-				yhyb: $('input[name="yhyb"]:checked').val(),
-				btt: $('input[name="btt"]:checked').val(),
-				kyb: $('input[name="kyb"]:checked').val(),
-				bwxms: $('input[name="bwxms"]').val(),
-				bbz: $('input[name="bbz"]').val(),
-				bzgms: $('input[name="bzgms"]').val(),
-				bdqytms: $('input[name="bdqytms"]').val(),
-				kqbz: $('input[name="kqbz"]').val(),
-				yhybms: $('input[name="yhybms"]').val(),
-				bttms: $('input[name="bttms"]').val(),
-				kybms: $('input[name="kybms"]').val(),
-				yhbz: $('input[name="yhbz"]').val(),
-				ysqz: $('input[name="ysqz"]').val(),
-				createtime: $('input[name="createtime"]').val(),
-				qczs: $('input[name="qczs"]').val(),
-				qczx: $('input[name="qczx"]').val(),
-				qcys: $('input[name="qcys"]').val(),
-				qcyx: $('input[name="qcyx"]').val(),
-				yczs: $('input[name="yczs"]').val(),
-				yczx: $('input[name="yczx"]').val(),
-				ycys: $('input[name="ycys"]').val(),
-				ycyx: $('input[name="ycyx"]').val(),
-				jczs: $('input[name="jczs"]').val(),
-				jczx: $('input[name="jczx"]').val(),
-				jcys: $('input[name="jcys"]').val(),
-				jcyx: $('input[name="jcyx"]').val(),
-			}
+			var params = returnData();
+			params[cl]=getCheckArry('cl');
+			debugger;
 			$.ajax({
 				type: "post",
 				url: BaseUrl + '/InquiryWgk/add',

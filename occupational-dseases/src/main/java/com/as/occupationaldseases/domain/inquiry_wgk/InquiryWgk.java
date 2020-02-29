@@ -127,6 +127,31 @@ public class InquiryWgk {
     private String ysqzurl;
     @ApiModelProperty("创建时间")
     @TableField("createtime")
+    private Date createtime;
+    @ApiModelProperty("缺齿左上")
+    private String qczs;
+    @ApiModelProperty("缺齿左下")
+    private String qczx;
+    @ApiModelProperty("缺齿右上")
+    private String qcys;
+    @ApiModelProperty("缺齿右下")
+    private String qcyx;
+    @ApiModelProperty("义齿(假牙)左上")
+    private String yczs;
+    @ApiModelProperty("义齿(假牙)左下")
+    private String yczx;
+    @ApiModelProperty("义齿(假牙)右上")
+    private String ycys;
+    @ApiModelProperty("义齿(假牙)右下")
+    private String ycyx ;
+    @ApiModelProperty("龋齿左上")
+    private String jczs;
+    @ApiModelProperty("龋齿左下")
+    private String jczx;
+    @ApiModelProperty("龋齿右上")
+    private String jcys;
+    @ApiModelProperty("龋齿右下")
+    private String jcyx;
     private String res1;
     private String res2;
     private String res3;
