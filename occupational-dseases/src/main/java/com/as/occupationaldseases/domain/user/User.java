@@ -1,13 +1,18 @@
-package com.as.occupationaldseases.domain.user;
+package com.as.publichealth.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 @Data
 @ToString
+@TableName("user")
 public class User {
     @ApiModelProperty("用户id")
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     @ApiModelProperty("用户名称")
     private String name;
